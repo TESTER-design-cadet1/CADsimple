@@ -1,67 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Roleplay MDT System</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>CADsimpleV2 - MDT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
 </head>
 <body>
-  <div id="app">
-    <div id="loginPage">
-      <h2>Login</h2>
-      <input type="text" id="username" placeholder="Username or Callsign"/>
-      <input type="password" id="password" placeholder="Password (Dispatch only)"/>
-      <button onclick="login()">Login</button>
+    <div id="app">
+        <h1>CADsimpleV2 - Loading...</h1>
     </div>
-
-    <div id="dashboard" style="display:none;">
-      <h2>Welcome, <span id="displayName"></span></h2>
-      <p>Team: <span id="displayTeam"></span> | Rank: <span id="displayRank"></span> | Role: <span id="displayRole"></span></p>
-
-      <div id="freqControl">
-        <label>Radio Frequency:
-          <select id="radioFreq" onchange="changeFrequency()">
-            <option value="1">Police (1)</option>
-            <option value="2">EMS (2)</option>
-            <option value="3">Fire (3)</option>
-          </select>
-        </label>
-      </div>
-
-      <div id="textComm">
-        <h3>Text Communication</h3>
-        <div id="chatBox"></div>
-        <input type="text" id="chatMessage" placeholder="Type message"/>
-        <button onclick="sendMessage()">Send</button>
-      </div>
-
-      <div id="voiceComm">
-        <h3>Voice Message (Simulation)</h3>
-        <button onclick="speakMessage()">Speak</button>
-      </div>
-
-      <div id="dispatcherPanel" style="display:none;">
-        <h3>Dispatcher Controls</h3>
-        <input type="text" id="assignUser" placeholder="Username to Assign"/>
-        <select id="assignRole">
-          <option value="SWAT">SWAT</option>
-          <option value="K9">K9</option>
-          <option value="Pilot">Pilot</option>
-        </select>
-        <select id="assignRank">
-          <option value="Officer">Officer</option>
-          <option value="Sergeant">Sergeant</option>
-          <option value="Lieutenant">Lieutenant</option>
-        </select>
-        <button onclick="assignRoleRank()">Assign</button>
-        <label><input type="checkbox" id="privateMessageToggle"/> Private Message to Freq Only</label>
-      </div>
-
-      <button onclick="logout()">Logout</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
